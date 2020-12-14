@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Web Visualization Dashboard (Latitude)</title>
+      <!--Style first-->
+      <link rel="stylesheet" href="styles.css">
+      <!--Compiled CSS and JS via https://getbootstrap.com/docs/4.0/getting-started/download/#compiled-css-and-js-->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+      
+
+  </head>
+<body>
+<!--Index latitude navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" style="color:white" href="index.html">Latitude</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!--Collapse navbar on right with dropdowns to link to the other pages-->
+   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Plots
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="one.html">Max Temperature</a>
+            <a class="dropdown-item" href="two.html">Humidity</a>
+            <a class="dropdown-item" href="three.html">Cloudiness</a>
+            <a class="dropdown-item" href="four.html">Wind Speed</a>
+          </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="Comparisons.html">Comparison</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Data.html">Data</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class ="container-fluid">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav navbar-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>-->
+
+      <!-- @TODO: write a for loop that lists out your data and accesses the values using dot notation. -->
+<div class = "container-fluid">      
+  <div class="row">
+    <div class="col-sm-10 col-md-7">
+
+      <div class="card">
+        <div class="card-header">Summary: Latitude vs X</div>
+        <div class="card-body">
+          <img src="Fig1.png" class="img-fluid" alt="Max Temperature">  
+          <h4 class="card-title">Background</h4>
+          <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a datase on over 500 cities.</p>
+          <p>After assembling the dataset, we used Matplotlib to plot various aspects of the eather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualziations created as part of the analysis, as well as explanations and descriptions of any trends and correclations witnessed.</p>
+        </div>
+        </div>
+      </div>
+
+      <div class="col-sm-10 col-md-5">
+      
+      <div class="card">
+        <div class="card-header">Visualizations</div>
+        <div class="card-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-7">
+              <a href ="one.html"><img src="Fig1.png" class="img-fluid"  alt="Max Temperature"></a>
+              </div>  
+             
+              <div class="col-7">
+              <a href ="two.html"><img src="Fig2.png" class="img-fluid"  alt="Humidity"></a>             
+              </div>
+              <div class="row">
+                <div class="col-7">
+                <a href ="three.html"><img src="Fig3.png" class="img-fluid"  alt="Cloudiness"></a>
+                </div>  
+               
+                <div class="col-7">
+                <a href ="four.html"><img src="Fig4.png" class="img-fluid"  alt="Wind Speed"></a>             
+                </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  <!--<div class="row"></div>
+    <div class="col-md-7">
+
+      <div class="card" style="width:25rem;">
+        <div class="card-header">Visualizations</div>
+        <div class="card-body">
+          <a href ="one.html"><img src="Fig1.png" class="img-fluid"  alt="Max Temperature"></a>
+          <a href ="two.html"><img src="Fig2.png" class="img-fluid"  alt="Humidity"></a>
+          <a href ="three.html"><img src="Fig3.png" class="img-fluid"  alt="Cloudiness"></a>
+          <a href ="four.html"><img src="Fig4.png" class="img-fluid"  alt="Wind Speed"></a>
+          <p>imgs}</p>
+        </div>
+        </div>
+      </div>
+    </div>-->
+  </div>
+  </div> 
+</div>
+
+
+</body>
+
+
+<footer>
+  <center>
+      Copyright &copy; 2020<i>Created by Ariel</i>
+      <br>
+  <a href="index.html">Return to Home Page</a>
+  </center>
+</footer>
+</html>
